@@ -2,7 +2,7 @@ package com.interviewtask.springbootsimpleecommerce.response;
 
 public class JwtResponse {
     private String token;
-    private final String type = "Bearer";
+    private static final String type = "Bearer";
     private String username;
 
     /*
@@ -42,7 +42,7 @@ public class JwtResponse {
      * Get type.
      * @return type.
      */
-    public String getType() {
+    public static String getType() {
         return type;
     }
 
