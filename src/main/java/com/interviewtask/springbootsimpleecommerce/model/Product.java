@@ -10,20 +10,38 @@ public class Product {
     private String category;
     private Integer price;
     private String brand;
-    private Integer stock;
+    private String seller;
+    private String size;
 
-    public Product() {
+    /*
+     * Private constructor to hide implicit public one.
+     */
+    private Product() {
     }
 
-    public Product(String id, String name, String category, Integer price, String brand, Integer stock) {
-        this.id = id;
+    /**
+     * Constructor.
+     *
+     * @param name name
+     * @param category category
+     * @param price price
+     * @param brand brand
+     * @param seller seller
+     * @param size size
+     */
+    public Product(String name, String category, Integer price, String brand, String seller, String size) {
         this.name = name;
         this.category = category;
         this.price = price;
         this.brand = brand;
-        this.stock = stock;
+        this.seller = seller;
+        this.size = size;
     }
 
+    /**
+     * Pretty print product object.
+     * @return String
+     */
     @Override
     public String toString() {
         return "Product{" +
@@ -32,55 +50,120 @@ public class Product {
                 ", category='" + category + '\'' +
                 ", price=" + price +
                 ", brand='" + brand + '\'' +
-                ", stock=" + stock +
+                ", seller='" + seller + '\'' +
+                ", size='" + size + '\'' +
                 '}';
     }
 
+    /**
+     * Get id.
+     * @return id
+     */
     public String getId() {
         return id;
     }
 
+    /**
+     * Set id.
+     * @param id id
+     */
     public void setId(String id) {
         this.id = id;
     }
 
+    /**
+     * Get name.
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Set name.
+     * @param name name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Get category.
+     * @return category
+     */
     public String getCategory() {
         return category;
     }
 
+    /**
+     * Set category.
+     * @param category category
+     */
     public void setCategory(String category) {
         this.category = category;
     }
 
+    /**
+     * Get price.
+     * @return price
+     */
     public Integer getPrice() {
         return price;
     }
 
+    /**
+     * Set price.
+     * @param price price
+     */
     public void setPrice(Integer price) {
         this.price = price;
     }
 
+    /**
+     * Get brand.
+     * @return brand
+     */
     public String getBrand() {
         return brand;
     }
 
+    /**
+     * Set brand.
+     * @param brand brand
+     */
     public void setBrand(String brand) {
         this.brand = brand;
     }
 
-    public Integer getStock() {
-        return stock;
+    /**
+     * Get seller
+     * @return seller
+     */
+    public String getSeller() {
+        return seller;
     }
 
-    public void setStock(Integer stock) {
-        this.stock = stock;
+    /**
+     * Set seller.
+     * @param seller seller
+     */
+    public void setSeller(String seller) {
+        this.seller = seller;
+    }
+
+    /**
+     * Get size.
+     * @return size
+     */
+    public String getSize() {
+        return size;
+    }
+
+    /**
+     * Set size.
+     * @param size size
+     */
+    public void setSize(String size) {
+        this.size = size;
     }
 }
