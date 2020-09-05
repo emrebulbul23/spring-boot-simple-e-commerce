@@ -1,4 +1,4 @@
-package com.interviewtask.springbootsimpleecommerce.product;
+package com.interviewtask.springbootsimpleecommerce.controllers;
 
 import com.interviewtask.springbootsimpleecommerce.model.Product;
 import com.interviewtask.springbootsimpleecommerce.repositories.IProductRepository;
