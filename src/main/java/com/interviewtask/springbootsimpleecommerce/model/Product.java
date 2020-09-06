@@ -2,7 +2,9 @@ package com.interviewtask.springbootsimpleecommerce.model;
 
 import org.springframework.data.annotation.Id;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     @Id
     private String id;
 

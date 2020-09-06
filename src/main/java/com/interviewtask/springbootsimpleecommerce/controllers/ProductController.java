@@ -68,14 +68,12 @@ public class ProductController {
             security = @SecurityRequirement(name = "bearerAuth"))
     @PostMapping(value = "")
     public Product updateProduct(@RequestBody Product p) {
-        List<Product> collect = productRepository.findAll().stream().filter(product -> product.getCategory().equals(p.getCategory()) &&
-                product.getName().equals(p.getName()) &&
-                product.getBrand().equals(p.getBrand()))
-                .collect(Collectors.toList());
-        if (collect.isEmpty()) {
+        Optional<Product> byId = productRepository.findById(p.getId());
+        if (!byId.isPresent()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product to be updated is not found");
         }
-        p.setId(collect.get(0).getId());
+        Product pOld = byId.get();
+        p.setId(pOld.getId());
         return productRepository.save(p);
     }
 
