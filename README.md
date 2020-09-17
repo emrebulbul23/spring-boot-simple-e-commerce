@@ -1,7 +1,5 @@
 # Spring Boot Simple E-Commerce API
 
-AWS Link: http://18.217.8.127/swagger-ui.html
-
 A very simple implementation of an e-commerce api with Spring Boot framework.
 
 Tech Stack:
